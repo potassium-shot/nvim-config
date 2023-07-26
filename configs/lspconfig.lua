@@ -25,9 +25,19 @@ lspconfig.rust_analyzer.setup {
     ['rust-analyzer'] = {
       cargo = {
         allFeatures = true,
-      }
-    }
-  }
+      },
+      rustc = {
+        source = "discover",
+      },
+      workspace = {
+        symbol = {
+          search = {
+            scope = "workspace_and_dependencies",
+          },
+        },
+      },
+    },
+  },
 }
 
 lspconfig.omnisharp.setup {

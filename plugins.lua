@@ -79,6 +79,19 @@ local plugins = {
     lazy = false,
   },
 
+  {
+    "mhartington/formatter.nvim",
+    ft = { "cs" },
+  },
+
+  {
+    "Maan2003/lsp_lines.nvim",
+    lazy = false,
+    config = function(_)
+      require("lsp_lines").setup()
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

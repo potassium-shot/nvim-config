@@ -56,4 +56,16 @@ M.nvimtree = {
   },
 }
 
+M.formatter = {
+  filetype = {
+    cs = {
+      function()
+        return {
+          exe = "dotnet-csharpier",
+        }
+      end,
+    }
+  }
+}
+
 return M
